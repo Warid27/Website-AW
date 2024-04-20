@@ -1,0 +1,461 @@
+/* 
+    COLOR PALLETES
+    https://coolors.co/visualizer/4c5454-ff715b-ffffff-1ea896-523f38
+*/
+
+/* Font:
+"Poppins"
+"Nunito"
+"Roboto"
+"Montserrat"
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* LIGHT and DARK MODE */
+
+:root{
+    --primary-bg: url(../img/bg-lightmode.png);
+    --primary-bg-nav: rgb(237, 242, 237, .5);
+    --primary-color: #212121;
+}
+.dark-mode{
+    --primary-bg: url(../img/bg-darkmode.png);
+    --primary-bg-nav: rgb(33, 33, 33, .5); 
+    --primary-color: #edf2fc;
+}
+
+#toggleDark{
+    font-size: 2.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    cursor: pointer;
+    color: var(--primary-color);
+    opacity: .75;
+    transition: all .3s ease;
+}
+#toggleDark:hover{
+    opacity: 1;
+}
+
+.toggleNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+/* LIGHT and DARK MODE */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+body, html, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--primary-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: unset;
+    position: relative;
+    padding-bottom: 8em;
+    min-height: 100vh;
+}
+
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: "Nunito";
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: all .3s ease;
+    display: flex;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+}
+a:hover{
+    color: #ff715b !important;
+}
+a:active{
+    color: #1ea896 !important;
+}
+a:visited{
+    color: #523f38 !important;
+}
+/* HEADER */
+
+/* Butuh position fixed */
+header{
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background: var(--primary-bg-nav);
+    padding: 0 2rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 998;
+}
+
+.logo img{
+    width: 50px;
+    transition: all .3s ease;
+}
+.logo img:hover{
+    filter: brightness(150%) saturate(100%);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+}
+
+nav .toggle_btn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    display: none;
+}
+
+.login_btn{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.login_btn:active{
+    scale: 1.1;
+}
+/* HEADER */
+
+/* DROPDOWN MENU */
+
+.dropdown_menu{
+    z-index: 999;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 75px;
+    height: 0;
+    width: 300px;
+    border-radius: 15px;
+    background: var(--primary-bg-nav);
+    backdrop-filter: blur(1px);
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 390px;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+}
+
+.dropdown_menu a{
+    width: 100%;
+    color: var(--primary-color);
+    padding: 0;
+    margin: 0 auto;
+}
+/* DROPDOWN MENU */
+
+/* ==========CONTENTS========== */
+
+p{
+    font-size: 110%;
+    color: black;
+    font-family: "Montserrat";
+    text-align: justify;
+}
+h2{
+    font-family: "Poppins";
+}
+h1{
+    font-family: "Poppins";
+}
+
+#contents{
+    float: center;
+    width: max-content;
+    max-width: 75%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+}
+.contents-container{
+    display: flex;
+    padding: 8em 0 5em 0;
+}
+
+/* ABOUT */
+.media-sosial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0 0 0;
+    gap: 1em;
+}
+.medsos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+
+.socials-label{
+    font-family: "Poppins";
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.medsos i{
+    font-size: 3em;
+    color: #212121;
+    transition: all .3s ease;
+}
+.medsos a{
+    width: fit-content;
+    height: fit-content;
+}
+.medsos i:hover{
+    color: #ff715b;
+}
+.medsos i:active{
+    transform: scale(1.25);
+    color: #1ea896;
+}
+
+/* ABOUT */
+
+/* SKILL */
+.skill-title{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0 0 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em;
+    margin: auto;
+    padding: 1em 0;
+    width: 75%;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    height: max-content;
+    width: 12em;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card:hover .new{
+    display: block;
+}
+.new{
+    position: absolute;
+    display: none;
+    color: #fff;
+    z-index: 1;
+    font-family: "Roboto";
+    font-weight: bold;
+    top: 1em;
+    left: 1em;
+    background-color: #1ea896;
+    border-radius: 5px;
+    padding: .3em;
+    box-shadow: rgba(30, 168, 150, 0.4) 3px 3px, rgba(30, 168, 150, 0.3) 5px 5px;
+}
+.img{
+    text-align: center;
+    padding: 1em;
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.img img{
+    height: 10em;
+}
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 4px 30px rgba(34, 28, 28, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background-color: #523f38;
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 1em;
+}
+/* SKILL */
+
+/* CONTACT */
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3rem;
+}
+.contact-txt{
+    font-family: "Roboto";
+    border-right: 1px solid black;
+    padding: 1em 5em 0 0;
+}
+.contact-email{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    border-left: 1px solid black;
+    padding: 1em 0 0 5em;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto";
+    gap: .5em;
+}
+.input input{
+    padding: 1em;
+    border-radius: 5px;
+    width: 30em;
+    border: none;
+    outline: 1px solid #4c5454;
+}
+.input input:focus{
+    outline: 2px solid #ff715b;
+}
+.input textarea{
+    padding: 1em;
+    border-radius: 5px;
+    width: 30em;
+    border: none;
+    outline: 1px solid #4c5454;
+}
+.input textarea:focus{
+    outline: 2px solid #ff715b;
+}
+.input input[type="submit"]{
+    background-color: #ffffff;
+    border: 3px solid #4c5454;
+    opacity: .5;
+    width: max-content;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+.input input[type="submit"]:hover{
+    opacity: 1;
+    background-color: #ff715b;
+}
+.input input[type="submit"]:active{
+    transform: translateY(-10px);
+}
+/* CONTACT */    
+
+/* ==========CONTENTS========== */
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    font-family: "Montserrat";
+    background-color: rgb(82, 63, 56, 0.3);
+    backdrop-filter: blur(15px);
+    padding: 1em 0 1em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    color: #fff;
+}
+/* FOOTER */
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 992px){
+    nav .links,
+    nav .login_btn{
+        display: none;
+    }
+
+    nav .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* RESPONSIVE DESIGN */
